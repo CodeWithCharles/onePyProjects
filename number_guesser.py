@@ -15,6 +15,7 @@ def restartGame():
 
 
 def startGame():
+    guesses += 1
     os.system('cls')
     numberToFind = generateRrandom()
 
@@ -28,7 +29,7 @@ def startGame():
             continue
 
         if userGuess == numberToFind:
-            print("You got it !")
+            print("You got it in " + str(guesses) + " !")
             restartGame()
             break
         elif userGuess > numberToFind:
